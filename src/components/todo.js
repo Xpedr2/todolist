@@ -1,9 +1,21 @@
 import { useState } from "react";
 
 export default function TodoApp() {
-    function handleClick(e){
+    const [title, setTitle] = useState("hola");
+    const [todos, setTodos] = useState([]);
+
+    function handleSubmit(e){
         e.preventDefault();
-        setTitle("Santi");
+        const newTodo = {
+            id: crypto.randomUUID(),
+            title: title,
+            complited: false
+        }
+
+        const temp = [... todos];
+        temp.unshift(newTodo);
+
+        setTodos(temp);
     }
 
     function handleChange(e){
@@ -12,15 +24,21 @@ export default function TodoApp() {
         setTitle(value);
     }
 
-    const [title, setTitle] = useState("hola");
     return (
     <>
         <div className="todoContainer">
-            <form className="todoCreateForm">
+            <form className="todoCreateForm" onSubmit={handleSubmit}>
                 <input onChange={handleChange} className="todoImput" value={title} />
-                <input onClick={handleClick} type="submit" value="Create todo" className="buttonCreate" />
+                <input onClick={handleSubmit} type="submit" value="Create todo" className="buttonCreate" />
                 {title}
                 </form>
+                <div className="todosContainer">
+                    {
+                        todos.map(item => (
+                            <div>{item.title}</div>
+                        ))
+                    }
+                </div>
         </div>
     </>);
 }
