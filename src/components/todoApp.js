@@ -25,6 +25,16 @@ export default function TodoApp() {
         setTitle(value);
     }
 
+    function handleUpdate(id, value){
+        const temp = [... todos];
+        const item = temp.find((item)=>item.id === id);
+        item.title = value;
+        setTodos (temp);
+    }
+    function handleDelete(id) {
+        const temp = todos.filter(item => item.id != id);
+        setTodos(temp);
+    }
     return (
     
         <div className="todoContainer">
@@ -36,7 +46,7 @@ export default function TodoApp() {
                 <div className="todosContainer">
                     {
                         todos.map(item => (
-                            <Todo key={item.id} item={item}/>
+                            <Todo key={item.id} item={item} onUpdate={handleUpdate} onDelete={handleDelete}/>
                         ))
                     }
                 </div>
