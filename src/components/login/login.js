@@ -8,7 +8,7 @@ export default function Login () {
                 <label>Password</label>
                 <input type="password" placeholder="Password"></input>
                 <button className="buttonLogin">Login</button>
-                <button>Sing in width Google</button>
+                <button className="buttonGoogle">Sing in width Google</button>
                 <p>Forgot Password? <a>Click Here</a></p>
                 <p>Don't have an acount <a>Sing Up</a></p>
             </div>

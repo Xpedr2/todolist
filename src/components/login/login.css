@@ -21,6 +21,7 @@
     align-items: center;
     font-size: 2em;
     box-shadow: 1px 1px 100px  rgb(115, 115, 115);
+    text-shadow: 5px 5px 10px rgb(121, 121, 121);
      
  }
 
@@ -30,9 +31,26 @@
 input, p {
     margin: 5px;
 }
-button {
+button{
     margin: 15px 15px;
+
 }
+
 .buttonLogin {
     margin-bottom: 0px;
+    font-size: 1.2em;
+}
+.buttonGoogle {
+    background:rgb(66, 134, 244);
+    width: 200px;
+    border-radius: 20px;
+    margin: auto;
+    padding: 4px;
+    font-size: 1em;
+    color: rgb(249, 249, 249);
+}
+.buttonGoogle :hover {
+    color: rgb(66, 133, 244);
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
 }

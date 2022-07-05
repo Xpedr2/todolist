@@ -7,3 +7,10 @@ dudas
 
 definir una constante con
 const temp, la hace temporal? o es un nombre como cualquier otro... temp es palabra reservada?
+
+
+login
+quedó pendiente el hover del boton de google
+y ponerle el icono
+
+los textos de los lincs no se resaltan, ni se cambia el puntero
