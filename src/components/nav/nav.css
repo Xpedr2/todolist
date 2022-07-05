@@ -1,0 +1,16 @@
+.contaionerNav {
+    margin: 10;
+    display: flex;
+    background-color: rgb(154, 167, 178);
+    flex-direction: row;
+    
+}
+
+.navlist {
+    display: flex;
+}
+.navlist li {
+    list-style: none;
+    margin: 5px;
+
+}

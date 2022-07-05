@@ -13,7 +13,7 @@ export default function TodoApp() {
             complited: false
         }
 
-        const temp = [... todos];
+        const temp = [...todos];
         temp.unshift(newTodo);
 
         setTodos(temp);
@@ -26,13 +26,13 @@ export default function TodoApp() {
     }
 
     function handleUpdate(id, value){
-        const temp = [... todos];
+        const temp = [...todos];
         const item = temp.find((item)=>item.id === id);
         item.title = value;
         setTodos (temp);
     }
     function handleDelete(id) {
-        const temp = todos.filter(item => item.id != id);
+        const temp = todos.filter(item => item.id !== id);
         setTodos(temp);
     }
     return (

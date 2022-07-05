@@ -1,0 +1,38 @@
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 300px;
+    background-color: rgba(99, 109, 128, 0.096);
+    margin: 50px auto;
+    padding: 80px 30px 20px 30px;
+    border-radius: 10px;
+    
+}
+
+.divLogin {
+    background-color: rgba(0, 0, 0, 0.12);
+    height: 60px;
+    width: 280px;
+    margin: -460px auto -70px;
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 1px 1px 100px  rgb(115, 115, 115);
+     
+ }
+
+.inputLabel {
+    margin-top: 70px;
+}
+input, p {
+    margin: 5px;
+}
+button {
+    margin: 15px 15px;
+}
+.buttonLogin {
+    margin-bottom: 0px;
+}
