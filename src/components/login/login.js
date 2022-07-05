@@ -1,8 +1,8 @@
 import "./login.css"
 export default function Login () {
     return (
-        <>
             <div className="loginContainer">
+                <p className="welcome">Welcome</p>
                 <label className="inputLabel">Username</label>
                 <input placeholder="Username"></input>
                 <label>Password</label>
@@ -12,7 +12,5 @@ export default function Login () {
                 <p>Forgot Password? <a className="loginLink">Click Here</a></p>
                 <p>Don't have an acount <a className="loginLink">Sing Up</a></p>
             </div>
-            <div className="divLogin">Login</div>
-        </>
     )
 }
