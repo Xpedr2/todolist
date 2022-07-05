@@ -20,7 +20,7 @@
     justify-items: center;
     align-items: center;
     font-size: 2em;
-    box-shadow: 1px 1px 100px  rgb(115, 115, 115);
+    box-shadow: 1px 1px 120px  rgb(115, 115, 115);
     text-shadow: 5px 5px 10px rgb(121, 121, 121);
      
  }
@@ -48,9 +48,16 @@ button{
     padding: 4px;
     font-size: 1em;
     color: rgb(249, 249, 249);
+    border: none;
 }
-.buttonGoogle :hover {
+.buttonGoogle:hover {
     color: rgb(66, 133, 244);
     background-color: rgb(255, 255, 255);
-    transition: 0.5s;
+    transition: 0.4s;
+    box-shadow: 2px 2px 5px rgb(66, 133, 244);
+}
+
+.loginLink {
+    color: rgb(66, 133, 244);
+    cursor: pointer;
 }
