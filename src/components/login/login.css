@@ -1,39 +1,63 @@
 .loginContainer{
     display: flex;
     flex-direction: column;
-    height: 350px;
-    width: 300px;
-    background-color: rgba(136, 136, 136, 0.091);
+    height: 420px;
+    max-width: 340px;
+    min-width: 220px;
+    background-color: rgba(188, 187, 187, 0.091);
     margin: 20vh auto;
     padding: 40px 30px 20px 30px;
     border-radius: 10px;
     backdrop-filter: blur(8.5px);
     color: aliceblue;
+    border: 1px rgb(66, 133, 244);
     
 }
 
-
-.welcome {
+.loginTittle {
     text-align: center;
-    font-size: 2em;
+    font-size: 2.3em;
     padding-bottom: 20px;
+    letter-spacing: 3px;
 }
-
-
-input, p {
+.inputLabel{
+    margin-top: 10px;
+}
+.loginInput, p {
     margin: 5px 0;
 }
-button{
-    margin: 15px 15px;
-
+.loginInput {
+    background-color: rgba(108, 108, 108, 0.297);
+    color: rgba(240, 255, 255, 0.732);
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    padding: 0 10px;
 }
 
 .buttonLogin {
+    margin: 15px 0;
     margin-bottom: 0px;
     font-size: 1.2em;
+    max-width: 250px;
+    padding: 0 90px;
+    height: 35px;
+    margin: auto;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(120deg, rgb(3, 84, 215), rgb(49, 46, 232), rgb(66, 75, 244) );    
+    color: rgb(255, 255, 255);
 }
+.buttonLogin:hover {
+    transition: 0.5seg;    
+    box-shadow: 4px 2px 5px rgba(22, 20, 128, 0.603);
+    background: linear-gradient(120deg, rgb(3, 77, 194), rgb(43, 40, 202), rgb(60, 67, 217) );
+}
+
+
 .buttonGoogle {
-    background:rgb(66, 134, 244);
+    background: rgb(66, 134, 244);
     width: 200px;
     border-radius: 20px;
     margin: auto;
@@ -43,10 +67,8 @@ button{
     border: none;
 }
 .buttonGoogle:hover {
-    color: rgb(66, 133, 244);
-    background-color: rgb(255, 255, 255);
-    transition: 0.4s;
-    box-shadow: 2px 2px 5px rgb(66, 133, 244);
+    box-shadow: 2px 2px 5px rgba(14, 33, 62, 0.518);
+    background: rgb(61, 124, 226);
 }
 
 .loginLink {
