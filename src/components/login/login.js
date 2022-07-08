@@ -1,14 +1,39 @@
 import "./login.css"
-import { Link } from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
+import { useAuth } from "../context/authcontext"
+import { useState } from "react"
 
 
 export default function Login() {
     
-   
+    const navegate = useNavigate();
+    const {login}= useAuth ();
+    const [error, setError] = useState();
+    
+    const [user, setUser] = useState({
+        email: "",
+        password: "",
+    })
 
-    const handleSubmit = e => {
+    const handleChange = ({target: {name, value}}) => {
+        setUser ({...user, [name]: value })
+    }
+    
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        
+        setError("");
+        try{
+            await login(user.email, user.password)
+            navegate("/")
+        }
+        catch (error) {
+            
+            if (error.code === "auth/weak-password") {
+                setError("The password must be at least 6 characters")
+            }
+            // setError(error.message);
+        }
     }
 
     return (
