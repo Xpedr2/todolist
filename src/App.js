@@ -21,6 +21,8 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/RecoveryAccount' element={<RecoveryAccount/>}/>
+          <Route path='/board' element={<TodoApp/>}/>
+          
           <Route path='*' element={<NotFoundPage/>}/>
         </Routes>
       </BrowserRouter>

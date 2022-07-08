@@ -25,7 +25,7 @@ export default function Login() {
         setError("");
         try{
             await login(user.email, user.password)
-            navegate("/")
+            navegate("/board")
         }
         catch (error) {
             
