@@ -6,9 +6,9 @@ export default function Login () {
             <div className="loginContainer">
                 <p className="Tittle">Welcome</p>
                 <label className="inputLabel">Username</label>
-                <input className="loginInput" placeholder="Username"></input>
+                <input className="loginInput" required placeholder="Username"></input>
                 <label className="inputLabel">Password</label>
-                <input className="loginInput" type="password" placeholder="Password"></input>
+                <input className="loginInput" required type="password" placeholder="Password"></input>
                 <button className="buttonLogin">Login</button>
                 <button className="buttonGoogle">Sign in width Google</button>
                 <p>Forgot Password? <Link to="/RecoveryAccount" className="loginLink">Click Here</Link></p>
