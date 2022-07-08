@@ -6,21 +6,25 @@ import TodoApp from './components/todoapp/todoApp';
 import Home from "./components/HomePage/Home";
 import NotFoundPage from "./components/NotFoundPage";
 import RecoveryAccount from "./components/login/Recovery";
+import { AuthProvaider } from "./components/context/authcontext";
 
 
 function App() {
   return (
   <>
-    <BrowserRouter>
-      <NavBarr/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='*' element={<NotFoundPage/>}/>
-        <Route path='/RecoveryAccount' element={<RecoveryAccount/>}/>
-      </Routes>
-    </BrowserRouter>
+
+    <AuthProvaider>
+      <BrowserRouter>
+        <NavBarr/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/RecoveryAccount' element={<RecoveryAccount/>}/>
+          <Route path='*' element={<NotFoundPage/>}/>
+        </Routes>
+      </BrowserRouter>
+    </AuthProvaider>
     
   
   </>
