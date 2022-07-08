@@ -4,7 +4,9 @@ import { useAuth } from "../context/authcontext"
 import { useState } from "react"
 
 export default function Register () {
-
+    
+    const {signUp}= useAuth ();
+    
     const [user, setUser] = useState({
         email: "",
         password: "",
@@ -14,7 +16,6 @@ export default function Register () {
         setUser ({...user, [name]: value })
     }
     
-    const {signUp}= useAuth ();
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -27,9 +28,9 @@ export default function Register () {
                 <label className="inputLabel">Name</label>
                 <input className="loginInput" type="text" placeholder="Name" onChange={handleChange}></input>
                 <label className="inputLabel">Email</label>
-                <input type="email" className="loginInput" placeholder="Email Address" onChange={handleChange}></input>
+                <input type="email" className="loginInput" placeholder="Email Address" name="email" onChange={handleChange}></input>
                 <label className="inputLabel">Password</label>
-                <input className="loginInput" type="password" placeholder="Password" onChange={handleChange}></input>
+                <input className="loginInput" type="password" name="password"placeholder="Password" onChange={handleChange}></input>
                 <label className="inputLabel"> Confirm Password</label>
                 <input className="loginInput" type="password" placeholder="Password"></input>
                 <button className="buttonLogin">Sign Up</button>
