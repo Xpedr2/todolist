@@ -20,4 +20,3 @@ export function AuthProvaider({ children }) {
     
     return <authContext.Provider value={{signUp, login}}>{children}</authContext.Provider>
 }
-
