@@ -1,8 +1,9 @@
 .contaionerNav {
-    margin: 10;
+    /* margin: 10; */
     display: flex;
     background-color: rgb(154, 167, 178);
     flex-direction: row;
+    width: 100vw;
     
 }
 
