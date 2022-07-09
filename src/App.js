@@ -6,7 +6,8 @@ import TodoApp from './components/todoapp/todoApp';
 import Home from "./components/HomePage/Home";
 import NotFoundPage from "./components/NotFoundPage";
 import RecoveryAccount from "./components/login/Recovery";
-import { AuthProvaider } from "./components/context/authcontext";
+import { AuthProvaider } from "./components/context/authContext";
+import { ProtectedRoute } from "./components/ProtectedRoutes";
 
 
 function App() {
@@ -21,7 +22,11 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/RecoveryAccount' element={<RecoveryAccount/>}/>
-          <Route path='/board' element={<TodoApp/>}/>
+          <Route path='/board' element={
+            <ProtectedRoute>
+              <TodoApp/>
+            </ProtectedRoute>
+          }/>
           
           <Route path='*' element={<NotFoundPage/>}/>
         </Routes>

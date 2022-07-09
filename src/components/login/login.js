@@ -1,6 +1,6 @@
 import "./login.css"
 import {Link, useNavigate} from "react-router-dom"
-import { useAuth } from "../context/authcontext"
+import { useAuth } from "../context/authContext"
 import { useState } from "react"
 
 
@@ -13,11 +13,11 @@ export default function Login() {
     const [user, setUser] = useState({
         email: "",
         password: "",
+        name: ""
     })
 
-    const handleChange = ({target: {name, value}}) => {
-        setUser ({...user, [name]: value })
-    }
+    const handleChange = ({ target: { value, name } }) =>
+    setUser({ ...user, [name]: value });
     
 
     const handleSubmit = async (e) => {
@@ -25,6 +25,7 @@ export default function Login() {
         setError("");
         try{
             await login(user.email, user.password)
+            console.log(user);
             navegate("/board")
         }
         catch (error) {
@@ -40,9 +41,9 @@ export default function Login() {
         <form onSubmit={handleSubmit} className="loginContainer">
             <p className="Tittle">Welcome</p>
             <label className="inputLabel">Email</label>
-            <input type="email" className="loginInput" placeholder="email" name="email"></input>
+            <input type="email" className="loginInput" placeholder="email" name="email" onChange={handleChange}></input>
             <label className="inputLabel">Password</label>
-            <input className="loginInput" type="password" placeholder="Password" name="password" ></input>
+            <input className="loginInput" type="password" placeholder="Password" name="password" onChange={handleChange} ></input>
             <button className="buttonLogin">Login</button>
             <button className="buttonGoogle">Sign in width Google</button>
             <p>Forgot Password? <Link to="/RecoveryAccount" className="loginLink">Click Here</Link></p>

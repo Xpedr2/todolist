@@ -1,7 +1,49 @@
 .todoContainer{
     margin-left: 100px;
+    background-color: rgba(188, 187, 187, 0.091);
+    backdrop-filter: blur(8.5px);
+    max-width: 250px;
+    padding: 15px;
+    border-radius: 5px;
+    
 }
-.todo {
-    margin: 10px;
-}
+.todoItem {
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(188, 187, 187, 0.091);
+    border-radius: 10px;
+    backdrop-filter: blur(8.5px);
+    width: 200px;
 
+}
+.itemTitle {
+    margin: 5px 10px;
+    color: aliceblue;
+    white-space: wrap;
+}
+.buttonItem {
+    margin: 0 10px;
+}
+.todoImput {
+    background-color: rgba(108, 108, 108, 0.141);
+    color: rgba(240, 255, 255, 0.732);
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    padding: 0 10px;
+}
+ .buttonCreate {
+    margin: 5px;
+    margin-bottom: 0px;
+    font-size: 1em;
+    max-width: 250px;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(120deg, rgb(3, 84, 215), rgb(49, 46, 232), rgb(66, 75, 244) );    
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+ }

@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { useAuth } from "../context/authContext";
 import Todo from "./todo";
+
 
 export default function TodoApp() {
     const [title, setTitle] = useState("hola");
     const [todos, setTodos] = useState([]);
+    const {user} = useAuth();
+    
 
     function handleSubmit(e){
         e.preventDefault();
@@ -36,20 +40,25 @@ export default function TodoApp() {
         setTodos(temp);
     }
     return (
-    
-        <div className="todoContainer">
-            <form className="todoCreateForm" onSubmit={handleSubmit}>
-                <input onChange={handleChange} className="todoImput" value={title} />
-                <input onClick={handleSubmit} type="submit" value="Create todo" className="buttonCreate" />
-                
+        
+        <div >
+            <h2 className="Tittle">Board</h2>
+            <div className="todoContainer">
+                <form className="todoCreateForm" onSubmit={handleSubmit}>
+                        <input onChange={handleChange} className="todoImput" value={title} />
+                        <input onClick={handleSubmit} type="submit" value="+" className="buttonCreate" />
+                        
                 </form>
                 <div className="todosContainer">
                     {
                         todos.map(item => (
-                            <Todo key={item.id} item={item} onUpdate={handleUpdate} onDelete={handleDelete}/>
+                                <Todo key={item.id} item={item} onUpdate={handleUpdate} onDelete={handleDelete}/>
                         ))
                     }
                 </div>
+            </div>
+                
         </div>
+    
     );
 }
