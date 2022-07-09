@@ -40,25 +40,21 @@ export default function TodoApp() {
         setTodos(temp);
     }
     return (
-        
-        <div >
-            <h2 className="Tittle">Board</h2>
-            <div className="todoContainer">
-                <form className="todoCreateForm" onSubmit={handleSubmit}>
-                        <input onChange={handleChange} className="todoImput" value={title} />
-                        <input onClick={handleSubmit} type="submit" value="+" className="buttonCreate" />
-                        
-                </form>
-                <div className="todosContainer">
-                    {
-                        todos.map(item => (
-                                <Todo key={item.id} item={item} onUpdate={handleUpdate} onDelete={handleDelete}/>
-                        ))
-                    }
+                <div className="todoContainer backgroundBlur boxshadow">
+                    <form className="todoCreateForm" onSubmit={handleSubmit}>
+                        <div className="setCreate">
+                            <input onChange={handleChange} className="todoImput" value={title} />
+                            <input onClick={handleSubmit} type="submit" value="+" className="buttonCreate boxshadow" />
+                        </div>
+                            
+                    </form>
+                    <div className="todosContainer">
+                        {
+                            todos.map(item => (
+                                    <Todo key={item.id} item={item} onUpdate={handleUpdate} onDelete={handleDelete}/>
+                            ))
+                        }
+                    </div>
                 </div>
-            </div>
-                
-        </div>
-    
     );
 }

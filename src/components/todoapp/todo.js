@@ -18,19 +18,21 @@ export default function Todo({item, onUpdate, onDelete}){
                 setIsEdit(false);
             }
             return (
-                <form className="todoUpdateForm" onSubmit={handleSubmit}>
-                    <input type="text" onChange={handleChange} value={newValue}/>
-                    <button onClick={handleClickUpdateTodo}>Update</button>
-                </form>
+                <div className="todoItem backgroundBlur boxshadow">
+                    <form className="todoUpdateForm" onSubmit={handleSubmit}>
+                        <input className="todoImput" type="text" onChange={handleChange} value={newValue}/>
+                        <button className="buttonCreate boxshadow" onClick={handleClickUpdateTodo}>Update</button>
+                    </form>
+                </div>
             );
         }
 
         function TodoElement(){
             return (
-                <div className="todoItem">
+                <div className="todoItem backgroundBlur boxshadow">
                     <div className="itemTitle">{item.title}</div>
-                    <button className="buttonItem" onClick={() => setIsEdit(true)}>Edit</button>
-                    <button onClick={(e) => onDelete(item.id)}>Delete</button>
+                    <button className="buttonCreate boxshadow" onClick={() => setIsEdit(true)}>Edit</button>
+                    <button className="buttonCreate boxshadow"onClick={(e) => onDelete(item.id)}>Delete</button>
                 </div>
             );
         }

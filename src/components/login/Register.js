@@ -14,7 +14,7 @@ export default function Register () {
     const [user, setUser] = useState({
         email: "",
         password: "",
-        name: ""
+        displayName: ""
     })
 
     const handleChange = ({target: {name, value}}) => {
@@ -42,7 +42,7 @@ export default function Register () {
         <form onSubmit={handleSubmit} className="loginContainer">
             <p className="Tittle">Register</p>
             <label className="inputLabel">Name</label>
-            <input className="loginInput" type="text" placeholder="Name" onChange={handleChange} name="name"></input>
+            <input className="loginInput" type="text" placeholder="Name" onChange={handleChange} name="displayName"></input>
             <label className="inputLabel">Email</label>
             <input type="email" className="loginInput" placeholder="Email Address" name="email" onChange={handleChange}></input>
             <label className="inputLabel">Password</label>

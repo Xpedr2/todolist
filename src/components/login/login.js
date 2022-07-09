@@ -13,7 +13,7 @@ export default function Login() {
     const [user, setUser] = useState({
         email: "",
         password: "",
-        name: ""
+        displayName: ""
     })
 
     const handleChange = ({ target: { value, name } }) =>

@@ -2,12 +2,13 @@ import { BrowserRouter, Route, Routes} from "react-router-dom"
 import Login from './components/login/login';
 import Register from './components/login/Register';
 import NavBarr from './components/nav/nav';
-import TodoApp from './components/todoapp/todoApp';
 import Home from "./components/HomePage/Home";
 import NotFoundPage from "./components/NotFoundPage";
 import RecoveryAccount from "./components/login/Recovery";
 import { AuthProvaider } from "./components/context/authContext";
 import { ProtectedRoute } from "./components/ProtectedRoutes";
+import Board from "./components/todoapp/Board";
+
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <Route path='/RecoveryAccount' element={<RecoveryAccount/>}/>
           <Route path='/board' element={
             <ProtectedRoute>
-              <TodoApp/>
+            <Board/>      
             </ProtectedRoute>
           }/>
           

@@ -1,49 +1,87 @@
-.todoContainer{
-    margin-left: 100px;
+.board {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    min-width: 540px;
+}
+.setCreate {
+    width: 95%;
+    white-space: nowrap;
+    margin: auto;
+}
+.backgroundBlur {
     background-color: rgba(188, 187, 187, 0.091);
     backdrop-filter: blur(8.5px);
-    max-width: 250px;
     padding: 15px;
     border-radius: 5px;
-    
 }
+
+.boxshadow {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.458) ;
+}
+
+.todoContainer{
+    margin: auto;
+    /* margin: 0 5px; */
+    width: 30%;
+    border-radius: 5px; 
+    min-height: 68vh;
+    padding: 8px;
+}
+
 .todoItem {
     margin: auto;
     margin-top: 10px;
     padding: 10px;
-    background-color: rgba(188, 187, 187, 0.091);
-    border-radius: 10px;
-    backdrop-filter: blur(8.5px);
-    width: 200px;
-
+    min-width: 100px;
 }
+
 .itemTitle {
     margin: 5px 10px;
     color: aliceblue;
     white-space: wrap;
 }
+
 .buttonItem {
     margin: 0 10px;
 }
+
 .todoImput {
-    background-color: rgba(108, 108, 108, 0.141);
-    color: rgba(240, 255, 255, 0.732);
+    background-color: rgba(108, 108, 108, 0.65);
+    color: rgba(240, 255, 255, 0.647);
+    letter-spacing: 1px;
     border: none;
     height: 30px;
+    max-width: 70%;
     border-radius: 10px;
     font-size: 0.9em;
     padding: 0 10px;
 }
  .buttonCreate {
     margin: 5px;
-    margin-bottom: 0px;
-    font-size: 1em;
-    max-width: 250px;
+    font-size: 0.9em;
+    letter-spacing: 1px;
     padding: 0 10px;
     height: 30px;
-    border-radius: 50%;
+    border-radius: 15px;
     border: none;
     background: linear-gradient(120deg, rgb(3, 84, 215), rgb(49, 46, 232), rgb(66, 75, 244) );    
     color: rgb(255, 255, 255);
-    white-space: nowrap;
+    
+ }
+
+
+
+ @media screen and (max-width: 618px ){
+    .board {
+        width: 98vw;
+        padding: 5px;
+    }
+    .setCreate {
+        width: 90%;
+        margin: auto;
+    }
+    .todoImput{
+        margin-left: -5px;
+    }
  }
