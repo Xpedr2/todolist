@@ -7,7 +7,7 @@ import { useState } from "react"
 export default function Login() {
     
     const navegate = useNavigate();
-    const {login}= useAuth ();
+    const {login, loginWithGoogle}= useAuth ();
     const [error, setError] = useState();
     
     const [user, setUser] = useState({
@@ -24,8 +24,7 @@ export default function Login() {
         e.preventDefault()
         setError("");
         try{
-            await login(user.email, user.password)
-            console.log(user);
+            await login(user.email, user.password);
             navegate("/board")
         }
         catch (error) {
@@ -37,6 +36,16 @@ export default function Login() {
         }
     }
 
+        const handleGoogleSignin = async () => {
+            try{
+                await loginWithGoogle();
+                navegate("/board");
+            }
+            catch (error){
+                setError(error.message);
+            }
+        }
+
     return (
         <form onSubmit={handleSubmit} className="loginContainer">
             <p className="Tittle">Welcome</p>
@@ -44,8 +53,8 @@ export default function Login() {
             <input type="email" className="loginInput" placeholder="email" name="email" onChange={handleChange}></input>
             <label className="inputLabel">Password</label>
             <input className="loginInput" type="password" placeholder="Password" name="password" onChange={handleChange} ></input>
-            <button className="buttonLogin">Login</button>
-            <button className="buttonGoogle">Sign in width Google</button>
+            <button className="buttonLogin" type="submit">Login</button>
+            <button className="buttonGoogle" onClick={handleGoogleSignin}>Sign in width Google</button>
             <p>Forgot Password? <Link to="/RecoveryAccount" className="loginLink">Click Here</Link></p>
             <p>Don't have an acount <Link to="/register" className="loginLink">Sign Up</Link></p>
         </form>

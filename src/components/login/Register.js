@@ -27,7 +27,7 @@ export default function Register () {
         setError("");
         try{
             await signUp(user.email, user.password)
-            navegate("/")
+            navegate("/board")
         }
         catch (error) {
             
@@ -49,7 +49,7 @@ export default function Register () {
             <input className="loginInput" type="password" name="password"placeholder="Password" onChange={handleChange}></input>
             <label className="inputLabel"> Confirm Password</label>
             <input className="loginInput" type="password" placeholder="Password"></input>
-            <button className="buttonLogin">Sign Up</button>
+            <button className="buttonLogin" type="submit">Sign Up</button>
             <p>Already have an acount? <Link to="/login" className="loginLink"> Sign In </Link></p>
         </form>
     )
