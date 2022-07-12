@@ -13,7 +13,7 @@ homework
 
 [OK]    Crear componente que sirva para Registro de usuario.
 
-[]    Crear componente para reinicio de contraseña.
+[OK]    Crear componente para reinicio de contraseña.
 
 [OK]    Crear un componente que permita una navegacion dentro de la aplicacion.
 
@@ -43,7 +43,7 @@ homework
 
 []    implementar DarkMode
 
-[]    Van a darle funcionalidad a Create account/reset password para los componentes creados previamente.
+[OK]    Van a darle funcionalidad a Create account/reset password para los componentes creados previamente.
 
 []    Crear un documento en firestore y cargarlo...
 
