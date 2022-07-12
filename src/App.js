@@ -28,7 +28,7 @@ function App() {
             <Board/>      
             </ProtectedRoute>
           }/>
-          
+          <Route path='/resetPass' element={<NotFoundPage/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
         </Routes>
       </BrowserRouter>

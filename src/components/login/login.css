@@ -41,8 +41,8 @@
     margin: 15px 0;
     margin-bottom: 0px;
     font-size: 1.2em;
-    max-width: 250px;
-    padding: 0 80px;
+    min-width: 50%;
+    padding: 0 15px;
     height: 35px;
     margin: auto;
     border-radius: 15px;

@@ -22,7 +22,7 @@ export default function NavBarr () {
                 {/* <button className="buttonLogOut center" onClick={handleLogOut}>LogOut</button> */}
                 <li><NavLink  to="/login" className="center textoClaro">Login</NavLink></li>
                 {(user != null) ? <button className="buttonLogOut center" onClick={handleLogOut}>LogOut</button> : <></>}
-                {(user != null) ? <UserData className="center"/> : <></> }
+                {(user != null) ? <UserData className="center"/> : <></>}
             </ul>
         </div>
     )
