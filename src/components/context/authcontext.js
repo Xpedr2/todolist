@@ -19,7 +19,6 @@ export function AuthProvaider({ children }) {
     }
     const login = (email, password) => {
         const userCredentials = signInWithEmailAndPassword(auth, email, password);
-        console.log(userCredentials);
     }
     const logout = () => signOut(auth);
     const resetPassword = async (email) => sendPasswordResetEmail(auth, email);
@@ -29,13 +28,12 @@ export function AuthProvaider({ children }) {
         return signInWithPopup(auth, googleProvider) 
     }
     
-    useEffect (() => {
-        onAuthStateChanged(auth, currentUser => {
-            console.log({ currentUser });
-            setUser(currentUser);
-            setLoading(false);
+    useEffect(() => {
+        onAuthStateChanged(auth, (currentUser) => {
+          setUser(currentUser);
+        //   setLoading(false);
         });
-    }, [])
+      }, []);
 
     return <authContext.Provider value={{signUp, login, user, logout, loading, loginWithGoogle, resetPassword }}>{children}</authContext.Provider>
 }

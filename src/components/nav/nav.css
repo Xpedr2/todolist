@@ -1,11 +1,13 @@
 .contaionerNav {
     /* margin: 10; */
     display: flex;
-    background-color: rgba(154, 167, 178, 0.533);
+    background-color: rgba(154, 167, 178, 0.295);
     flex-direction: row;
     width: 100vw;
     color: aliceblue;
+    backdrop-filter: blur(2.5px);
 }
+
 .textoClaro {
     color: aliceblue;
 
@@ -28,6 +30,7 @@
 .userInfo{
     display: flex;
     align-items: center;
+    
     /* float: right; */
 
 }
@@ -40,4 +43,7 @@
 .center {
     align-self: center;
     align-items: center;
+}
+.no-wrap {
+    white-space: nowrap;
 }

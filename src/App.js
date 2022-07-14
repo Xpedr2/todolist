@@ -25,7 +25,7 @@ function App() {
           <Route path='/RecoveryAccount' element={<RecoveryAccount/>}/>
           <Route path='/board' element={
             <ProtectedRoute>
-            <Board/>      
+              <Board/>      
             </ProtectedRoute>
           }/>
           <Route path='/resetPass' element={<NotFoundPage/>}/>

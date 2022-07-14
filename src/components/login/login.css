@@ -8,7 +8,7 @@
     margin: 20vh auto;
     padding: 40px 30px 20px 30px;
     border-radius: 10px;
-    backdrop-filter: blur(8.5px);
+    backdrop-filter: blur(4.5px);
     color: aliceblue;
     border: 1px rgb(66, 133, 244);
 }
@@ -35,7 +35,11 @@
     font-size: 0.9em;
     padding: 0 10px;
 }
-
+.center {
+    display: flex;
+    text-align: center;
+    
+}
 .buttonLogin {
     
     margin: 15px 0;
@@ -78,4 +82,17 @@
     color: rgb(66, 133, 244);
     cursor: pointer;
     white-space: nowrap;
+}
+
+.reCaptcha {
+    margin: auto;
+}
+.error-captcha {
+    color: rgb(222, 59, 59);
+    margin: auto;
+    background-color: rgb(78, 63, 63);
+    padding: 5px;
+    border: 1px solid rgb(178, 40, 40);
+    margin: 10px;
+    
 }
