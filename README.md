@@ -1,4 +1,4 @@
-proyecto todo-list similar a trello
+proyecto todo-list similar al tablero trello
 
 
 homework
